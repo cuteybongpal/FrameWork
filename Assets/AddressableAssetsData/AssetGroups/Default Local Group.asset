@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_GUID: b938d45b202f25c44b7d1b2301510b5a
+  m_SerializeEntries:
+  - m_GUID: 0fc9ee1712e6b8f44a2d7a30469e679d
+    m_Address: Assets/@Resource/Prefab/Cube.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7a21b9b7c5fc7e04091ce94a5fa87c05
+    m_Address: Assets/@Resource/Prefab/Cube 1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7bb5f4a77a5c6f34294a14cbc4d10495
+    m_Address: Assets/@Resource/Prefab/Cube 3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bac642c5791688942a8d425b573df667
+    m_Address: Assets/@Resource/Prefab/Cube 2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: e2a63cc293171eb4c9cf51b19f779496, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 1f90cd88c7c62364a867eb96748336d2, type: 2}
+    - {fileID: 11400000, guid: c1162ddef2e30f949a97b520c247e89a, type: 2}
