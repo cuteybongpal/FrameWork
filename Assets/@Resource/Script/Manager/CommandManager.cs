@@ -14,5 +14,8 @@ public class CommandManager : Singleton<CommandManager>
             Destroy(gameObject);
         }
     }
-
+    public T ExecuteCommand<T>(T command) where T : ICommand
+    {
+        return command.Execute<T>();
+    }
 }

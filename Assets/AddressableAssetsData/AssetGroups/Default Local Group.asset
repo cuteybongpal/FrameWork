@@ -14,31 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Default Local Group
   m_GUID: b938d45b202f25c44b7d1b2301510b5a
-  m_SerializeEntries:
-  - m_GUID: 0fc9ee1712e6b8f44a2d7a30469e679d
-    m_Address: Assets/@Resource/Prefab/Cube.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7a21b9b7c5fc7e04091ce94a5fa87c05
-    m_Address: Assets/@Resource/Prefab/Cube 1.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7bb5f4a77a5c6f34294a14cbc4d10495
-    m_Address: Assets/@Resource/Prefab/Cube 3.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bac642c5791688942a8d425b573df667
-    m_Address: Assets/@Resource/Prefab/Cube 2.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: e2a63cc293171eb4c9cf51b19f779496, type: 2}
   m_SchemaSet:
