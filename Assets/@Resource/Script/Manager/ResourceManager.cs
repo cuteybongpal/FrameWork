@@ -99,5 +99,9 @@ public class ResourceManager
             Addressables.Release(op);
         }
     }
+    public void LoadAllAsync<T>(string label) where T : UnityEngine.Object
+    {
+
+    }
 }
 

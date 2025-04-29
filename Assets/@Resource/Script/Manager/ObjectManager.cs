@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.Rendering.FilterWindow;
 
 public class ObjectManager
 {
@@ -10,6 +11,7 @@ public class ObjectManager
 
 public class ManagedObject<T> where T : MonoBehaviour
 {
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½
     public HashSet<T> objects = new HashSet<T>();
     public List<T> PoolingList = new List<T>();
 
@@ -42,7 +44,7 @@ public class ManagedObject<T> where T : MonoBehaviour
     {
         if (!objects.Remove(element))
         {
-            Debug.Log("ÇØ´ç ¿ä¼Ò°¡ objectsÇØ½¬¼Â¿¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+            Debug.Log("ï¿½Ø´ï¿½ ï¿½ï¿½Ò°ï¿½ objectsï¿½Ø½ï¿½ï¿½Â¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.");
             return;
         }
         element.gameObject.SetActive(false);
