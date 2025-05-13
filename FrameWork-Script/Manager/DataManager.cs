@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DataManager
+public class DataManager 
 {
     
 }
