@@ -7,7 +7,7 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceLocations;
 
-public class ResourceManager
+public class ResourceManager : IPool
 {
     public static Dictionary<string, UnityEngine.Object> resources = new Dictionary<string, UnityEngine.Object>();
 
@@ -129,6 +129,16 @@ public class ResourceManager
             Addressables.Release(objs.Item2[i]);
             resources.Remove(objs.Item1[i]);
         }
+    }
+
+    public void Pool()
+    {
+        ;
+    }
+
+    public void Init()
+    {
+        ;
     }
 }
 

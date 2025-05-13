@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GameObjectPool
+{
+    Dictionary<Type, Queue<IPool>> PoolingDict = new Dictionary<Type, Queue<IPool>>();
+
+    public T GetInstance<T>(string key) where T : MonoBehaviour, IPool
+    {
+        Type type = typeof(T);
+
+        if (!PoolingDict.ContainsKey(type))
+            PoolingDict[type] = new Queue<IPool>();
+
+        IPool pool;
+
+        if (PoolingDict[type].Count > 0)
+            pool = PoolingDict[type].Dequeue();
+        else
+        {
+            ILoad Loading = DIContainer.GetInstance<ILoad>() as IPool;
+            pool = resourceManager.Load<GameObject>(key).GetComponent<T>();
+            DIContainer.ReturnInstance(resourceManager);
+        }
+
+        return pool as T;
+
+    }
+    public void ReturnInstance<T>(T element) where T : class, IPool
+    {
+        if (PoolingDict.ContainsKey(typeof(T)))
+            PoolingDict[typeof(T)].Enqueue(element);
+        else
+            PoolingDict[typeof(T)] = new Queue<IPool>();
+    }
+
+}
