@@ -18,7 +18,7 @@ public class DIPool
             pool = PoolingDict[type].Dequeue();
         else
             pool = func.Invoke();
-
+        pool.Init();
         return pool;
 
     }
