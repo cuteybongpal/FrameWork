@@ -19,9 +19,9 @@ public class GameObjectPool
             pool = PoolingDict[type].Dequeue();
         else
         {
-            ILoad Loading = DIContainer.GetInstance<ILoad>() as IPool;
-            pool = resourceManager.Load<GameObject>(key).GetComponent<T>();
-            DIContainer.ReturnInstance(resourceManager);
+            ILoad loading = DIContainer.GetInstance<ILoad>() as ILoad;
+            pool = loading.Load<GameObject>(key).GetComponent<T>();
+            loading.Pool();
         }
 
         return pool as T;
