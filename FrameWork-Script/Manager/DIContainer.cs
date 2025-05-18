@@ -5,10 +5,10 @@ using UnityEngine;
 public static class DIContainer 
 {
     static DIPool Pool = new DIPool();
-    static Dictionary<Type, Func<IPool>> BindedType = new Dictionary<Type, Func<IPool>>();
+    static Dictionary<Type, Func<IDependency>> BindedType = new Dictionary<Type, Func<IDependency>>();
 
     //객체 얻어옴
-    public static IPool GetInstance<T>() where T : IPool
+    public static IDependency GetInstance<T>() where T : IDependency
     {
         if (!BindedType.ContainsKey(typeof(T)))
         {
@@ -16,7 +16,7 @@ public static class DIContainer
             return default(T);
         }
 
-        IPool instance = Pool.GetInstance(typeof(T), BindedType[typeof(T)]);
+        IDependency instance = Pool.GetInstance(typeof(T), BindedType[typeof(T)]);
         return instance;
     }
     //객체 반납
@@ -29,7 +29,7 @@ public static class DIContainer
     /// </summary>
     /// <typeparam name="IKey">키 : 인터페이스여야 함</typeparam>
     /// <typeparam name="ValueType">값 : 키값을 상속받는 얘여야함</typeparam>
-    public static void Bind<IKey>(Func<IPool> func) where IKey : class
+    public static void Bind<IKey>(Func<IKey> func) where IKey : class, IDependency
     {
         BindedType.Add(typeof(IKey), func);
     }
