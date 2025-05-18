@@ -99,7 +99,7 @@ public class ResourceManager : IPool
         return null;
         
     }
-    public void LoadAllAsync<T>(string label, Action<UnityEngine.Object> callback) where T : UnityEngine.Object
+    public void LoadAllAsync<T>(string label, Action<T> callback) where T : UnityEngine.Object
     {
         AsyncOperationHandle<IList<IResourceLocation>> op = Addressables.LoadResourceLocationsAsync(label, typeof(T));
 
