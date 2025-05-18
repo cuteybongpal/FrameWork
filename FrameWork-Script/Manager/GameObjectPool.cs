@@ -6,7 +6,7 @@ public class GameObjectPool
 {
     Dictionary<Type, Queue<IPool>> PoolingDict = new Dictionary<Type, Queue<IPool>>();
 
-    public T GetInstance<T>(string key) where T : MonoBehaviour, IPool
+    public T Spawn<T>(string key) where T : MonoBehaviour, IPool
     {
         Type type = typeof(T);
 
@@ -27,7 +27,7 @@ public class GameObjectPool
         return pool as T;
 
     }
-    public void ReturnInstance<T>(T element) where T : class, IPool
+    public void DeSpawn<T>(T element) where T : MonoBehaviour, IPool
     {
         if (PoolingDict.ContainsKey(typeof(T)))
             PoolingDict[typeof(T)].Enqueue(element);
